@@ -28,6 +28,6 @@ class BooksPage:
         pattern = 'Page [0-9]+ of ([0-9]+)'
         matcher = re.search(pattern, content)
 
-        pages = int(matcher.group(1)) # whatever is inside the brackets, if multiple would be group 1, 2, 3 etc
+        pages = int(matcher.group(1))
         logger.info(f'Number of pages found: {pages}')
         return pages 

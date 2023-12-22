@@ -50,6 +50,6 @@ class BookParser:
         rating_number = accepted_ratings.get(returned_ratings[0])
         logger.debug(f'found book rating, {rating_number}')
         
-        return rating_number # e.g.1st class is "Three", so returned accepted_ratings("Three") = int 3, and if no match returns None instead of key error 
+        return rating_number
     
 

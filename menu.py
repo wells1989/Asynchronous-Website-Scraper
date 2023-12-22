@@ -35,11 +35,10 @@ def print_cheapest_books():
 # sorting by 2 factors, e.g. sorts by first then if any match, sorts by 2nd, e.g. best_cheapest_books = sorted(books, key=lambda x: (x.rating * -1, x.price))
 
 books_generator = (x for x in books)
-# above alt to looping / using len etc as books doesn't have a len property, generators don't need it as they generate on the fly
 
 def get_next_book():
     print(next(books_generator))
-# just prints the books out 1 after another
+
 
 
 def menu():
