@@ -31,9 +31,11 @@ urllib3==2.1.0
 ```python
 BooksPage class:
 
+@property
 BooksPage.books
     # returns a BookParser instance for each book
 
+@property
 BooksPage.page_count
     # uses regex to get the number of available pages in the site, to allow simultaneous page loading
 ```
@@ -41,15 +43,19 @@ BooksPage.page_count
 ```python
 BookParser class:
 
+@property
 BookParser.price    
     # uses regex to find a float of the book price
 
+@property
 BookParser.name    
     # returns the book title
 
+@property
 BookParser.link    
     # returns the href url link in each book
 
+@property
 BookParser.rating    
     # Scrapes the rating from the class attribute and returns it as an integer
 ```
