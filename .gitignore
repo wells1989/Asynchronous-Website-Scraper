@@ -1,1 +1,7 @@
+# .gitignore
+
+# Ignore logs.txt file
 logs.txt
+
+# Ignore the venv directory
+venv/
