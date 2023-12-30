@@ -9,7 +9,7 @@ Enter one of the following:
 - 'q' to quit
 enter your choice: '''
 
-original_books = books.copy() # need a copy, otherwise the sorting functions will sort the same list permanently
+original_books = books.copy()
 
 def search_books_by_keyword():
     keyword = input("Enter a keyword to search in book titles: ")
@@ -22,17 +22,19 @@ def search_books_by_keyword():
         print(f"No books found with the keyword '{keyword}'.")
 
 
+# gets the 10 books with the best rating
 def print_best_books():
-    best_books = sorted(original_books, key=lambda x: x.rating, reverse=True)[:10] # sorts by the x.rating property, first 10 indexes
+    best_books = sorted(original_books, key=lambda x: x.rating, reverse=True)[:10]
     for book in best_books:
         print(book)
 
+
+# gets the 10 cheapest books
 def print_cheapest_books():
-    cheapest_books = sorted(original_books, key=lambda x: x.price)[:10] # sorts by the price, cheapest 10
+    cheapest_books = sorted(original_books, key=lambda x: x.price)[:10]
     for book in cheapest_books:
         print(book)
 
-# sorting by 2 factors, e.g. sorts by first then if any match, sorts by 2nd, e.g. best_cheapest_books = sorted(books, key=lambda x: (x.rating * -1, x.price))
 
 books_generator = (x for x in books)
 
