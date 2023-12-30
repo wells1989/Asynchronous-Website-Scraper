@@ -33,7 +33,7 @@ async def fetch_page(session, url):
         async with session.get(url) as response:
                 print(f'page took {time.time() - page_state}')
                 return await response.text()
-    # each fetch_page has a timeout(10 seconds) and awaits the response, so others can run concurrently, and returns tha response text aka html content
+    # each fetch_page has a timeout(10 seconds) and awaits the response, so others can run concurrently, and returns response text aka html content
 
 async def get_multiple_pages(loop, *urls):
     tasks = []
